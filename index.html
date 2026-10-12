@@ -1,0 +1,1838 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>A.C.K. Thika Memorial · Centenary 100 Years</title>
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* ============================================
+       RESET & BRAND TOKENS
+       ============================================ */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      /* Centenary Brand Palette */
+      --royal-red: #8B1A1A;
+      --deep-red: #5C0E0E;
+      --crimson: #A52A2A;
+      --gold: #C9A227;
+      --bright-gold: #E6C45E;
+      --warm-gold: #F0D68A;
+      --midnight: #0A1428;
+      --deep-navy: #0F1F3A;
+      --royal-blue: #1B3A5C;
+      --ivory: #FEFCF5;
+      --cream: #FBF7EE;
+      --pearl: #F5F0E8;
+      --charcoal: #1A1A1A;
+      --soft-black: #0D0D0D;
+
+      /* Typography */
+      --font-display: 'Cormorant Garamond', 'Georgia', serif;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+      /* Shadows */
+      --shadow-sm: 0 4px 12px rgba(10, 20, 40, 0.06);
+      --shadow-md: 0 12px 28px rgba(10, 20, 40, 0.1);
+      --shadow-lg: 0 24px 48px rgba(10, 20, 40, 0.14);
+      --shadow-gold: 0 8px 24px rgba(201, 162, 39, 0.35);
+      --shadow-red: 0 8px 24px rgba(139, 26, 26, 0.25);
+
+      --max-width: 1300px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--ivory);
+      color: var(--charcoal);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4, h5 {
+      font-family: var(--font-display);
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      line-height: 1.15;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* ============================================
+       CENTENARY RIBBON
+       ============================================ */
+    .centenary-ribbon {
+      background: linear-gradient(90deg, var(--deep-red), var(--royal-red), var(--gold), var(--royal-red), var(--deep-red));
+      color: #fff;
+      text-align: center;
+      padding: 0.6rem 1rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      position: relative;
+      z-index: 101;
+      overflow: hidden;
+    }
+
+    .centenary-ribbon::before,
+    .centenary-ribbon::after {
+      content: '✦';
+      margin: 0 1.5rem;
+      color: var(--bright-gold);
+    }
+
+    /* ============================================
+       NAVIGATION
+       ============================================ */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(254, 252, 245, 0.94);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(201, 162, 39, 0.25);
+      padding: 0.8rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      box-shadow: 0 2px 30px rgba(10, 20, 40, 0.04);
+      transition: all 0.3s;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+    }
+
+    .logo-emblem {
+      position: relative;
+      width: 52px;
+      height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-emblem-ring {
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      border: 2px solid var(--gold);
+      animation: rotateSlow 20s linear infinite;
+    }
+
+    .logo-emblem-ring::before {
+      content: '';
+      position: absolute;
+      top: -3px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 6px;
+      height: 6px;
+      background: var(--gold);
+      border-radius: 50%;
+      box-shadow: 0 0 8px var(--gold);
+    }
+
+    @keyframes rotateSlow {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .logo-emblem-inner {
+      background: linear-gradient(135deg, var(--deep-red), var(--royal-red));
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--bright-gold);
+      font-weight: 700;
+      font-size: 0.75rem;
+      font-family: var(--font-display);
+      box-shadow: var(--shadow-red);
+      z-index: 2;
+    }
+
+    .logo-text {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--deep-navy);
+      line-height: 1.1;
+    }
+
+    .logo-text small {
+      display: block;
+      font-family: var(--font-body);
+      font-size: 0.6rem;
+      font-weight: 600;
+      letter-spacing: 3px;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.2rem;
+      font-weight: 500;
+      font-size: 0.9rem;
+      color: var(--deep-navy);
+    }
+
+    .nav-links a {
+      transition: color 0.25s;
+      position: relative;
+      padding: 0.3rem 0;
+      letter-spacing: 0.3px;
+    }
+
+    .nav-links a:hover {
+      color: var(--royal-red);
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--gold), var(--royal-red));
+      transition: width 0.3s;
+      border-radius: 2px;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      background: linear-gradient(135deg, var(--royal-red), var(--deep-red));
+      color: #fff !important;
+      padding: 0.55rem 1.5rem !important;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      box-shadow: var(--shadow-red);
+      transition: all 0.25s;
+    }
+
+    .nav-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(139, 26, 26, 0.4);
+    }
+
+    .nav-cta::after {
+      display: none !important;
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.8rem;
+      color: var(--deep-navy);
+      cursor: pointer;
+    }
+
+    /* ============================================
+       HERO — CINEMATIC CENTENARY
+       ============================================ */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: url('images/Church.jpg') center/cover no-repeat;
+      color: #fff;
+      padding: 4rem 1.5rem;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        135deg,
+        rgba(10, 20, 40, 0.88) 0%,
+        rgba(92, 14, 14, 0.75) 40%,
+        rgba(10, 20, 40, 0.85) 100%
+      );
+      z-index: 1;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 20% 80%, rgba(201, 162, 39, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(139, 26, 26, 0.2) 0%, transparent 50%);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      max-width: 1000px;
+    }
+
+    .hero-year {
+      font-family: var(--font-display);
+      font-size: clamp(5rem, 18vw, 12rem);
+      font-weight: 700;
+      line-height: 0.9;
+      color: transparent;
+      -webkit-text-stroke: 2px rgba(230, 196, 94, 0.4);
+      text-stroke: 2px rgba(230, 196, 94, 0.4);
+      margin-bottom: -1rem;
+      user-select: none;
+      letter-spacing: 0.05em;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--gold), var(--bright-gold));
+      color: var(--deep-navy);
+      padding: 0.5rem 2rem;
+      border-radius: 40px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 6px 20px rgba(201, 162, 39, 0.5);
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 7vw, 5.5rem);
+      line-height: 1.05;
+      margin-bottom: 0.5rem;
+      text-shadow: 0 4px 40px rgba(0, 0, 0, 0.6);
+      font-weight: 700;
+    }
+
+    .hero h1 .sub {
+      display: block;
+      font-size: 0.38em;
+      font-weight: 400;
+      font-style: italic;
+      color: var(--bright-gold);
+      letter-spacing: 6px;
+      margin-top: 0.8rem;
+      text-transform: uppercase;
+    }
+
+    .hero-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      margin: 2rem auto;
+      max-width: 400px;
+    }
+
+    .hero-divider .line {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+
+    .hero-divider i {
+      color: var(--bright-gold);
+      font-size: 1.2rem;
+    }
+
+    .hero p {
+      font-size: 1.15rem;
+      max-width: 680px;
+      margin: 0 auto 2.5rem;
+      opacity: 0.95;
+      text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+      font-weight: 300;
+      line-height: 1.8;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1.2rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: linear-gradient(135deg, var(--gold), var(--bright-gold));
+      color: var(--deep-navy);
+      padding: 1rem 2.5rem;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: 0.5px;
+      box-shadow: 0 12px 30px -8px rgba(201, 162, 39, 0.6);
+      transition: all 0.3s;
+      border: 2px solid transparent;
+      cursor: pointer;
+      font-family: var(--font-body);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 18px 40px -8px rgba(201, 162, 39, 0.7);
+    }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: transparent;
+      color: #fff;
+      padding: 1rem 2.5rem;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1rem;
+      letter-spacing: 0.5px;
+      border: 2px solid rgba(255, 255, 255, 0.5);
+      transition: all 0.3s;
+      cursor: pointer;
+      font-family: var(--font-body);
+    }
+
+    .btn-outline:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: var(--bright-gold);
+      color: var(--bright-gold);
+      transform: translateY(-3px);
+    }
+
+    .hero-scroll {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 3;
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 0.75rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(8px); }
+    }
+
+    /* ============================================
+       SECTION STYLES
+       ============================================ */
+    section {
+      padding: 6rem 1.5rem;
+      position: relative;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .section-eyebrow {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--royal-red);
+      margin-bottom: 1rem;
+      position: relative;
+    }
+
+    .section-eyebrow::before,
+    .section-eyebrow::after {
+      content: '—';
+      margin: 0 0.8rem;
+      color: var(--gold);
+    }
+
+    .section-title h2 {
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      color: var(--deep-navy);
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    .section-title h2 em {
+      color: var(--royal-red);
+      font-style: italic;
+    }
+
+    .section-title p {
+      max-width: 650px;
+      margin: 0 auto;
+      color: #4a4a4a;
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+
+    .gold-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      margin: 1.5rem auto;
+      max-width: 300px;
+    }
+
+    .gold-divider .line {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+
+    .gold-divider i {
+      color: var(--gold);
+      font-size: 1rem;
+    }
+
+    /* ============================================
+       HERITAGE SECTION
+       ============================================ */
+    .heritage-section {
+      background: var(--cream);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .heritage-section::before {
+      content: '100';
+      position: absolute;
+      top: -50px;
+      right: -30px;
+      font-family: var(--font-display);
+      font-size: 28rem;
+      font-weight: 700;
+      color: rgba(201, 162, 39, 0.04);
+      line-height: 1;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .heritage-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .heritage-image {
+      border-radius: 2rem;
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid rgba(201, 162, 39, 0.3);
+      position: relative;
+    }
+
+    .heritage-image::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 60%, rgba(10, 20, 40, 0.4) 100%);
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .heritage-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    .heritage-image:hover img {
+      transform: scale(1.04);
+    }
+
+    .heritage-badge {
+      position: absolute;
+      bottom: 1.5rem;
+      left: 1.5rem;
+      z-index: 3;
+      background: rgba(254, 252, 245, 0.95);
+      backdrop-filter: blur(8px);
+      padding: 0.8rem 1.5rem;
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      box-shadow: var(--shadow-md);
+    }
+
+    .heritage-badge i {
+      color: var(--royal-red);
+      font-size: 1.2rem;
+    }
+
+    .heritage-badge span {
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--deep-navy);
+    }
+
+    .heritage-text h3 {
+      font-size: 2.5rem;
+      color: var(--deep-navy);
+      margin-bottom: 1.2rem;
+      line-height: 1.2;
+    }
+
+    .heritage-text h3 em {
+      color: var(--royal-red);
+      font-style: italic;
+    }
+
+    .heritage-text > p {
+      margin-bottom: 1.8rem;
+      color: #3a3a3a;
+      font-size: 1.05rem;
+      line-height: 1.9;
+    }
+
+    .heritage-list {
+      list-style: none;
+      margin-top: 2rem;
+    }
+
+    .heritage-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.2rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid rgba(201, 162, 39, 0.15);
+    }
+
+    .heritage-list li:last-child {
+      border-bottom: none;
+    }
+
+    .heritage-list .icon-wrap {
+      flex-shrink: 0;
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(139, 26, 26, 0.08), rgba(201, 162, 39, 0.12));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--royal-red);
+      font-size: 1.1rem;
+    }
+
+    .heritage-list h4 {
+      font-family: var(--font-body);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--deep-navy);
+      margin-bottom: 0.2rem;
+    }
+
+    .heritage-list p {
+      font-size: 0.92rem;
+      color: #666;
+      line-height: 1.6;
+    }
+
+    /* ============================================
+       CENTENARY TIMELINE BANNER
+       ============================================ */
+    .timeline-banner {
+      background: linear-gradient(135deg, var(--midnight) 0%, var(--deep-red) 50%, var(--midnight) 100%);
+      color: #fff;
+      padding: 5rem 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .timeline-banner::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 10% 50%, rgba(201, 162, 39, 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 90% 50%, rgba(201, 162, 39, 0.15) 0%, transparent 40%);
+    }
+
+    .timeline-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .timeline-header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+
+    .timeline-header h3 {
+      font-size: 2.5rem;
+      margin-bottom: 0.8rem;
+      color: #fff;
+    }
+
+    .timeline-header h3 i {
+      color: var(--bright-gold);
+      margin-right: 0.5rem;
+    }
+
+    .timeline-header p {
+      color: rgba(255, 255, 255, 0.75);
+      font-size: 1.05rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .timeline-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      position: relative;
+    }
+
+    .timeline-grid::before {
+      content: '';
+      position: absolute;
+      top: 30px;
+      left: 10%;
+      right: 10%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--gold), var(--gold), transparent);
+      z-index: 1;
+    }
+
+    .timeline-item {
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .timeline-dot {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold), var(--bright-gold));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+      color: var(--deep-navy);
+      font-size: 1.4rem;
+      box-shadow: 0 0 0 6px rgba(201, 162, 39, 0.15), 0 0 0 12px rgba(201, 162, 39, 0.08);
+      transition: all 0.3s;
+    }
+
+    .timeline-item:hover .timeline-dot {
+      transform: scale(1.1);
+      box-shadow: 0 0 0 8px rgba(201, 162, 39, 0.25), 0 0 0 16px rgba(201, 162, 39, 0.1);
+    }
+
+    .timeline-item h4 {
+      font-size: 1.3rem;
+      color: var(--bright-gold);
+      margin-bottom: 0.5rem;
+    }
+
+    .timeline-item p {
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.6;
+    }
+
+    /* ============================================
+       CHOIR SECTION — PREMIUM FEATURE
+       ============================================ */
+    .choir-section {
+      background: var(--ivory);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .choir-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+
+    .choir-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .choir-text h3 {
+      font-size: 2.5rem;
+      color: var(--deep-navy);
+      margin-bottom: 1.2rem;
+    }
+
+    .choir-text h3 em {
+      color: var(--royal-red);
+      font-style: italic;
+    }
+
+    .choir-text > p {
+      margin-bottom: 1.8rem;
+      color: #3a3a3a;
+      font-size: 1.05rem;
+      line-height: 1.9;
+    }
+
+    .choir-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .choir-stat {
+      text-align: center;
+      padding: 1.2rem 0.5rem;
+      border-radius: 1rem;
+      background: linear-gradient(135deg, rgba(201, 162, 39, 0.08), rgba(139, 26, 26, 0.06));
+      border: 1px solid rgba(201, 162, 39, 0.2);
+    }
+
+    .choir-stat i {
+      color: var(--royal-red);
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .choir-stat h4 {
+      font-family: var(--font-body);
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--deep-navy);
+      margin-bottom: 0.2rem;
+    }
+
+    .choir-stat p {
+      font-size: 0.75rem;
+      color: #777;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .choir-image {
+      border-radius: 2rem;
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid rgba(201, 162, 39, 0.3);
+      position: relative;
+    }
+
+    .choir-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    .choir-image:hover img {
+      transform: scale(1.04);
+    }
+
+    .choir-image-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 2rem 1.5rem 1.5rem;
+      background: linear-gradient(180deg, transparent, rgba(10, 20, 40, 0.85));
+      color: #fff;
+      z-index: 2;
+    }
+
+    .choir-image-overlay h4 {
+      font-size: 1.3rem;
+      color: var(--bright-gold);
+      margin-bottom: 0.3rem;
+    }
+
+    .choir-image-overlay p {
+      font-size: 0.85rem;
+      opacity: 0.8;
+    }
+
+    /* ============================================
+       GALLERY
+       ============================================ */
+    .gallery-section {
+      background: var(--pearl);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.8rem;
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .gallery-card {
+      background: #fff;
+      border-radius: 1.5rem;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+      border: 1px solid rgba(201, 162, 39, 0.15);
+      position: relative;
+    }
+
+    .gallery-card:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--gold);
+    }
+
+    .gallery-card .img-wrap {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .gallery-card img {
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s;
+    }
+
+    .gallery-card:hover img {
+      transform: scale(1.06);
+    }
+
+    .gallery-card .img-badge {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      background: rgba(254, 252, 245, 0.95);
+      backdrop-filter: blur(8px);
+      padding: 0.3rem 0.9rem;
+      border-radius: 30px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--royal-red);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .gallery-caption {
+      padding: 1.3rem 1.2rem 1.5rem;
+      text-align: center;
+      background: #fff;
+    }
+
+    .gallery-caption h4 {
+      font-size: 1.1rem;
+      color: var(--deep-navy);
+      margin-bottom: 0.25rem;
+      font-weight: 700;
+    }
+
+    .gallery-caption p {
+      font-size: 0.82rem;
+      color: #777;
+      letter-spacing: 0.5px;
+    }
+
+    /* ============================================
+       MINISTRIES
+       ============================================ */
+    .ministries-section {
+      background: var(--ivory);
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .card {
+      background: #fff;
+      padding: 2.5rem 2rem;
+      border-radius: 1.8rem;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid rgba(201, 162, 39, 0.12);
+      transition: all 0.35s;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--royal-red), var(--gold));
+      transform: scaleX(0);
+      transition: transform 0.4s;
+    }
+
+    .card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+      border-color: rgba(201, 162, 39, 0.3);
+    }
+
+    .card-icon {
+      width: 70px;
+      height: 70px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, rgba(139, 26, 26, 0.08), rgba(201, 162, 39, 0.12));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+      color: var(--royal-red);
+      font-size: 1.8rem;
+      transition: all 0.35s;
+    }
+
+    .card:hover .card-icon {
+      background: linear-gradient(135deg, var(--royal-red), var(--deep-red));
+      color: var(--bright-gold);
+      transform: scale(1.08) rotate(-5deg);
+    }
+
+    .card h4 {
+      font-size: 1.4rem;
+      margin-bottom: 0.75rem;
+      color: var(--deep-navy);
+    }
+
+    .card p {
+      color: #666;
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    /* ============================================
+       CTA SECTION
+       ============================================ */
+    .cta-section {
+      background: linear-gradient(135deg, var(--deep-navy) 0%, var(--midnight) 100%);
+      color: #fff;
+      text-align: center;
+      padding: 5rem 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 50% 0%, rgba(201, 162, 39, 0.15) 0%, transparent 60%);
+    }
+
+    .cta-inner {
+      max-width: 700px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .cta-section h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-bottom: 1rem;
+      color: #fff;
+    }
+
+    .cta-section h2 em {
+      color: var(--bright-gold);
+      font-style: italic;
+    }
+
+    .cta-section p {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      line-height: 1.8;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* ============================================
+       FOOTER
+       ============================================ */
+    footer {
+      background: var(--midnight);
+      color: #aaa;
+      padding: 4.5rem 2rem 2rem;
+      position: relative;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.5fr;
+      gap: 3rem;
+      max-width: var(--max-width);
+      margin: 0 auto 3rem;
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .footer-brand .logo-emblem-inner {
+      width: 44px;
+      height: 44px;
+      font-size: 0.7rem;
+    }
+
+    .footer-brand .logo-text {
+      color: #fff;
+      font-size: 1.2rem;
+    }
+
+    .footer-brand .logo-text small {
+      color: var(--gold);
+    }
+
+    .footer-col p {
+      color: #999;
+      margin-bottom: 0.7rem;
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+
+    .footer-col h4 {
+      color: var(--bright-gold);
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+      font-family: var(--font-display);
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .footer-col a {
+      color: #999;
+      margin-bottom: 0.7rem;
+      display: block;
+      transition: all 0.2s;
+      font-size: 0.9rem;
+    }
+
+    .footer-col a:hover {
+      color: var(--bright-gold);
+      transform: translateX(4px);
+    }
+
+    .footer-col a i {
+      margin-right: 0.6rem;
+      color: var(--gold);
+      width: 1.2rem;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 0.8rem;
+      margin-top: 0.5rem;
+    }
+
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.06);
+      color: #fff;
+      transition: all 0.3s;
+      font-size: 1.1rem;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .social-links a:hover {
+      background: linear-gradient(135deg, var(--royal-red), var(--deep-red));
+      color: var(--bright-gold);
+      transform: translateY(-4px);
+      border-color: var(--gold);
+      box-shadow: var(--shadow-red);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 2.5rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 0.85rem;
+      color: #777;
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .footer-bottom .centenary-mark {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--gold);
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      margin-bottom: 0.8rem;
+    }
+
+    /* ============================================
+       SCROLL REVEAL ANIMATIONS
+       ============================================ */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ============================================
+       RESPONSIVE
+       ============================================ */
+    @media (max-width: 1024px) {
+      .heritage-grid,
+      .choir-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .timeline-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.5rem;
+      }
+
+      .timeline-grid::before {
+        display: none;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 2.5rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        padding: 0.7rem 1.2rem;
+      }
+
+      .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1.5rem 0 1rem;
+        border-top: 1px solid rgba(201, 162, 39, 0.2);
+        margin-top: 0.8rem;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .mobile-menu-btn {
+        display: block;
+      }
+
+      .hero {
+        min-height: 90vh;
+      }
+
+      .hero-year {
+        font-size: 6rem;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .btn-primary, .btn-outline {
+        width: 100%;
+        max-width: 320px;
+        justify-content: center;
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+
+      .choir-stats {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.8rem;
+      }
+
+      .choir-stat h4 {
+        font-size: 1.1rem;
+      }
+
+      .timeline-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .container {
+        padding: 0 1.2rem;
+      }
+
+      section {
+        padding: 4rem 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .timeline-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .choir-stats {
+        grid-template-columns: 1fr;
+      }
+
+      .logo-text {
+        font-size: 1.05rem;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero-year {
+        font-size: 4.5rem;
+      }
+
+      .section-title h2 {
+        font-size: 1.9rem;
+      }
+
+      .heritage-text h3,
+      .choir-text h3 {
+        font-size: 1.9rem;
+      }
+
+      .timeline-banner {
+        padding: 3rem 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== CENTENARY RIBBON ===== -->
+  <div class="centenary-ribbon">✦ 1926 – 2026 · Celebrating 100 Years of God's Faithfulness ✦</div>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar">
+    <div class="logo">
+      <div class="logo-emblem">
+        <div class="logo-emblem-ring"></div>
+        <div class="logo-emblem-inner">100</div>
+      </div>
+      <div class="logo-text">
+        A.C.K. Thika Memorial
+        <small>Centenary · 1926–2026</small>
+      </div>
+    </div>
+    <button class="mobile-menu-btn" id="menuToggle" aria-label="Menu">
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#heritage">Heritage</a>
+      <a href="#centenary">Centenary</a>
+      <a href="#choir">Choir</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#ministries">Ministries</a>
+      <a href="#contact" class="nav-cta">Join Us</a>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <header id="home" class="hero">
+    <div class="hero-content">
+      <div class="hero-year">100</div>
+      <div class="hero-badge">✦ Centenary Celebration ✦</div>
+      <h1>
+        A.C.K. Thika Memorial
+        <span class="sub">A Century of Faith & Grace</span>
+      </h1>
+      <div class="hero-divider">
+        <span class="line"></span>
+        <i class="fas fa-cross"></i>
+        <span class="line"></span>
+      </div>
+      <p>Honouring 100 years of God's faithfulness, community, and service. Join us as we celebrate our past, embrace our present, and envision our future — together in Christ.</p>
+      <div class="hero-buttons">
+        <a href="#centenary" class="btn-primary">Join the Celebration <i class="fas fa-arrow-right"></i></a>
+        <a href="#choir" class="btn-outline"><i class="fas fa-music"></i> Our Choir</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <i class="fas fa-chevron-down"></i>
+    </div>
+  </header>
+
+  <!-- ===== HERITAGE ===== -->
+  <section id="heritage" class="heritage-section">
+    <div class="container">
+      <div class="section-title reveal">
+        <div class="section-eyebrow">Our Legacy</div>
+        <h2>A Century of <em>Grace</em></h2>
+        <div class="gold-divider">
+          <span class="line"></span>
+          <i class="fas fa-church"></i>
+          <span class="line"></span>
+        </div>
+        <p>Rooted in faith, built on prayer, and sustained by community — for 100 remarkable years.</p>
+      </div>
+      <div class="heritage-grid">
+        <div class="heritage-image reveal">
+          <img src="images/Church.jpg" alt="A.C.K. Thika Memorial Church building">
+          <div class="heritage-badge">
+            <i class="fas fa-award"></i>
+            <span>Est. 1926</span>
+          </div>
+        </div>
+        <div class="heritage-text reveal">
+          <h3>Built on <em>Faith</em>, Sustained by Grace</h3>
+          <p>From humble beginnings to a beacon of hope in Thika, A.C.K. Thika Memorial Church has been a spiritual home for generations. Our centenary is a living testament to God's unwavering love and the dedication of our founders, members, and leaders.</p>
+          <ul class="heritage-list">
+            <li>
+              <div class="icon-wrap"><i class="fas fa-church"></i></div>
+              <div>
+                <h4>Founded in 1926</h4>
+                <p>Proclaiming the Gospel for a full century in Thika.</p>
+              </div>
+            </li>
+            <li>
+              <div class="icon-wrap"><i class="fas fa-hands-praying"></i></div>
+              <div>
+                <h4>Thousands of Services</h4>
+                <p>Worship, weddings, baptisms, and dedications over 100 years.</p>
+              </div>
+            </li>
+            <li>
+              <div class="icon-wrap"><i class="fas fa-people-group"></i></div>
+              <div>
+                <h4>A Vibrant Community</h4>
+                <p>Serving Thika and beyond with love and compassion.</p>
+              </div>
+            </li>
+            <li>
+              <div class="icon-wrap"><i class="fas fa-star"></i></div>
+              <div>
+                <h4>Part of A.C.K. Diocese of Thika</h4>
+                <p>Standing united in the Anglican Church of Kenya.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CENTENARY TIMELINE BANNER ===== -->
+  <section id="centenary" class="timeline-banner">
+    <div class="timeline-inner">
+      <div class="timeline-header reveal">
+        <h3><i class="fas fa-crown"></i> 100 Years of Celebration</h3>
+        <p>Join us for a year of thanksgiving, worship, and community events as we mark this historic milestone in the life of our church.</p>
+      </div>
+      <div class="timeline-grid">
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"><i class="fas fa-seedling"></i></div>
+          <h4>1926</h4>
+          <p>The foundation is laid and the first congregation gathers in faith.</p>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"><i class="fas fa-church"></i></div>
+          <h4>1950s–2000</h4>
+          <p>Growth, expansion, and a deepening of ministry across generations.</p>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"><i class="fas fa-hands-helping"></i></div>
+          <h4>2000–2026</h4>
+          <p>Serving the community, planting churches, and raising leaders.</p>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"><i class="fas fa-crown"></i></div>
+          <h4>2026</h4>
+          <p>A grand centenary celebration — to God be the glory!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CHOIR SECTION ===== -->
+  <section id="choir" class="choir-section">
+    <div class="container">
+      <div class="section-title reveal">
+        <div class="section-eyebrow">Ministry Spotlight</div>
+        <h2>Voices of <em>Praise</em></h2>
+        <div class="gold-divider">
+          <span class="line"></span>
+          <i class="fas fa-music"></i>
+          <span class="line"></span>
+        </div>
+        <p>Our choir has lifted hearts to heaven for generations — a cornerstone of worship at A.C.K. Thika Memorial.</p>
+      </div>
+      <div class="choir-grid">
+        <div class="choir-text reveal">
+          <h3>Lifting <em>Hearts</em> Through Song</h3>
+          <p>From traditional hymns to contemporary anthems, the A.C.K. Thika Memorial Choir has been a living instrument of worship for decades. Their voices have graced countless services, weddings, funerals, and community events — bringing comfort, joy, and the presence of God to all who hear.</p>
+          <div class="choir-stats">
+            <div class="choir-stat">
+              <i class="fas fa-users"></i>
+              <h4>60+</h4>
+              <p>Members</p>
+            </div>
+            <div class="choir-stat">
+              <i class="fas fa-music"></i>
+              <h4>100+</h4>
+              <p>Songs</p>
+            </div>
+            <div class="choir-stat">
+              <i class="fas fa-calendar"></i>
+              <h4>50+</h4>
+              <p>Years Serving</p>
+            </div>
+          </div>
+        </div>
+        <div class="choir-image reveal">
+          <img src="images/choir.jpg" alt="A.C.K. Thika Memorial Church Choir">
+          <div class="choir-image-overlay">
+            <h4><i class="fas fa-music"></i> A.C.K. Thika Memorial Choir</h4>
+            <p>Ministering in song since the early years of our church</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GALLERY ===== -->
+  <section id="gallery" class="gallery-section">
+    <div class="container">
+      <div class="section-title reveal">
+        <div class="section-eyebrow">Centenary Gallery</div>
+        <h2>Glimpses of <em>Grace</em></h2>
+        <div class="gold-divider">
+          <span class="line"></span>
+          <i class="fas fa-images"></i>
+          <span class="line"></span>
+        </div>
+        <p>Moments from our journey — past, present, and the hopeful future we share.</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-card reveal">
+          <div class="img-wrap">
+            <img src="images/poster1.jpg" alt="Centenary celebration poster 1">
+            <div class="img-badge">1926</div>
+          </div>
+          <div class="gallery-caption">
+            <h4>Faith Through Generations</h4>
+            <p>The Foundation</p>
+          </div>
+        </div>
+        <div class="gallery-card reveal">
+          <div class="img-wrap">
+            <img src="images/poster2.jpg" alt="Centenary celebration poster 2">
+            <div class="img-badge">1950–2000</div>
+          </div>
+          <div class="gallery-caption">
+            <h4>Growing in Grace</h4>
+            <p>Seasons of Expansion</p>
+          </div>
+        </div>
+        <div class="gallery-card reveal">
+          <div class="img-wrap">
+            <img src="images/poster3.jpg" alt="Centenary celebration poster 3">
+            <div class="img-badge">2000–2026</div>
+          </div>
+          <div class="gallery-caption">
+            <h4>Serving Our Community</h4>
+            <p>Ministry in Action</p>
+          </div>
+        </div>
+        <div class="gallery-card reveal">
+          <div class="img-wrap">
+            <img src="images/poster4.jpg" alt="Centenary celebration poster 4">
+            <div class="img-badge">2026</div>
+          </div>
+          <div class="gallery-caption">
+            <h4>Hope for Tomorrow</h4>
+            <p>The Centenary</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MINISTRIES ===== -->
+  <section id="ministries" class="ministries-section">
+    <div class="container">
+      <div class="section-title reveal">
+        <div class="section-eyebrow">Get Involved</div>
+        <h2>Ministries & <em>Events</em></h2>
+        <div class="gold-divider">
+          <span class="line"></span>
+          <i class="fas fa-hands-praying"></i>
+          <span class="line"></span>
+        </div>
+        <p>Be part of our vibrant church family and discover where you can serve and grow.</p>
+      </div>
+      <div class="cards-grid">
+        <div class="card reveal">
+          <div class="card-icon"><i class="fas fa-music"></i></div>
+          <h4>Worship & Music</h4>
+          <p>Choirs, praise teams, and special centenary performances that lift hearts to God.</p>
+        </div>
+        <div class="card reveal">
+          <div class="card-icon"><i class="fas fa-child"></i></div>
+          <h4>Children & Youth</h4>
+          <p>Sunday school, youth fellowship, and mentorship programs for the next generation.</p>
+        </div>
+        <div class="card reveal">
+          <div class="card-icon"><i class="fas fa-hands-helping"></i></div>
+          <h4>Outreach & Missions</h4>
+          <p>Community service, evangelism, and charitable initiatives across Thika and beyond.</p>
+        </div>
+        <div class="card reveal">
+          <div class="card-icon"><i class="fas fa-calendar-check"></i></div>
+          <h4>Centenary Events</h4>
+          <p>Thanksgiving service, cultural day, anniversary banquet, and more to come.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta-section">
+    <div class="cta-inner reveal">
+      <h2>Be Part of <em>History</em></h2>
+      <p>Whether you've been with us for decades or are visiting for the first time, there's a place for you at A.C.K. Thika Memorial. Come celebrate 100 years of God's faithfulness with us.</p>
+      <div class="cta-buttons">
+        <a href="#contact" class="btn-primary">Plan Your Visit <i class="fas fa-arrow-right"></i></a>
+        <a href="#gallery" class="btn-outline"><i class="fas fa-images"></i> View Gallery</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer id="contact">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="footer-brand">
+          <div class="logo-emblem">
+            <div class="logo-emblem-ring"></div>
+            <div class="logo-emblem-inner">100</div>
+          </div>
+          <div class="logo-text">
+            A.C.K. Thika Memorial
+            <small>Centenary · 1926–2026</small>
+          </div>
+        </div>
+        <p>A century of faith, community, and service in Thika. Join us as we celebrate God's faithfulness and look forward to the next 100 years.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="#home">Home</a>
+        <a href="#heritage">Heritage</a>
+        <a href="#centenary">Centenary</a>
+        <a href="#choir">Choir</a>
+        <a href="#gallery">Gallery</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="#"><i class="fas fa-map-marker-alt"></i> Thika, Kenya</a>
+        <a href="tel:+254700000000"><i class="fas fa-phone"></i> +254 700 000 000</a>
+        <a href="mailto:info@ackthikamemorial.org"><i class="fas fa-envelope"></i> info@ackthikamemorial.org</a>
+        <a href="#"><i class="fas fa-clock"></i> Sun 8AM & 10AM</a>
+      </div>
+      <div class="footer-col">
+        <h4>Centenary Prayer</h4>
+        <p style="font-style: italic; color: #bbb; font-family: var(--font-display); font-size: 1.05rem; line-height: 1.7;">
+          "For a hundred years, Lord, You have been our dwelling place. May the next century be even greater, for Your glory."
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="centenary-mark">✦ 100 Years of Faith · 1926 – 2026 ✦</div>
+      <p>© <span id="year"></span> A.C.K. Thika Memorial Church · Centenary Celebration. All rights reserved.</p>
+      <p style="margin-top:0.4rem; font-size:0.75rem; color:#555;">Built with faith, hope, and love.</p>
+    </div>
+  </footer>
+
+  <!-- ===== JAVASCRIPT ===== -->
+  <script>
+    // Dynamic copyright year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      const icon = menuToggle.querySelector('i');
+      if (navLinks.classList.contains('active')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-times');
+      } else {
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      }
+    });
+
+    // Close mobile menu on link click
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        const icon = menuToggle.querySelector('i');
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      });
+    });
+
+    // Smooth scroll with sticky navbar offset
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          e.preventDefault();
+          const navHeight = document.querySelector('.navbar').offsetHeight + 40;
+          const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navHeight;
+          window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+        }
+      });
+    });
+
+    // Scroll reveal animation
+    const revealElements = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+  </script>
+
+</body>
+</html>
